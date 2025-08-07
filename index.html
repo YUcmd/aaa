@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>簡易拍賣網站</title>
+  <style>
+    body { font-family: Arial; background: #f8f8f8; text-align: center; }
+    .product { background: white; padding: 20px; border-radius: 8px; max-width: 400px; margin: 40px auto; box-shadow: 0 0 10px #ccc; }
+    img { width: 100%; border-radius: 8px; }
+    button { padding: 10px 20px; font-size: 16px; margin-top: 15px; }
+  </style>
+</head>
+<body>
+  <div class="product">
+    <h2>限量皮卡丘模型</h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Pok%C3%A9mon_Pikachu_art.png" alt="商品圖片">
+    <p>目前出價：<span id="price">100</span> 元</p>
+    <button onclick="bid()">我要出價 +10</button>
+  </div>
+
+  <script>
+    let currentPrice = 100;
+    function bid() {
+      currentPrice += 10;
+      document.getElementById('price').textContent = currentPrice;
+    }
+  </script>
+</body>
+</html>
